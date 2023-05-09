@@ -1,44 +1,22 @@
-# Use the Node.js image with version 14.x
-image: node:14
+image: node:lts-alpine
 
-# Cache the node_modules directory to speed up builds
-cache:
-  paths:
-    - node_modules/
+variables:
+  PNPM_VERSION: "6.14.2" # Change this to the version of pnpm you want to use
 
-# Define the stages of the pipeline
-stages:
-  - build
-  - deploy
+before_script:
+  - apk add --no-cache git pnpm
+  - rm -rf ~/.pnpm-store
 
-# Define the jobs for each stage
 build:
   stage: build
   script:
     - pnpm install
-    - pnpm build
+    - pnpm run build
 
 deploy:
   stage: deploy
   script:
-    - apt-get update -y
-    - apt-get install -y git
-    - git clone --depth 1 --branch master <your-repo-url> public
-    - rm -rf public/*
-    - cp -R dist/* public/
-    - cd public
-    - git add -A
-    - git commit -m "Deploy Nuxt.js app to GitLab Pages"
-    - git push origin master
-
-# Set the Pages artifacts directory to the "public" directory
-pages:
-  stage: deploy
-  script:
-    - echo "Deploying to GitLab Pages"
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
+    - apk add --no-cache git
+    - pnpm install
+    - pnpm run deploy
 
