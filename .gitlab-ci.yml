@@ -1,0 +1,44 @@
+# Use the Node.js image with version 14.x
+image: node:14
+
+# Cache the node_modules directory to speed up builds
+cache:
+  paths:
+    - node_modules/
+
+# Define the stages of the pipeline
+stages:
+  - build
+  - deploy
+
+# Define the jobs for each stage
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+
+deploy:
+  stage: deploy
+  script:
+    - apt-get update -y
+    - apt-get install -y git
+    - git clone --depth 1 --branch master <your-repo-url> public
+    - rm -rf public/*
+    - cp -R dist/* public/
+    - cd public
+    - git add -A
+    - git commit -m "Deploy Nuxt.js app to GitLab Pages"
+    - git push origin master
+
+# Set the Pages artifacts directory to the "public" directory
+pages:
+  stage: deploy
+  script:
+    - echo "Deploying to GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
