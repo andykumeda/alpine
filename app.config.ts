@@ -27,16 +27,25 @@ export default defineAppConfig({
     },
     socials: {
       twitter: '0xandyk',
-      instagram: 'andykumeda',
       linkedin: {
         icon: 'uil:linkedin',
         label: 'LinkedIn',
         href: 'https://linkedin.com/in/andykumeda'
       },
-      facebook: {
-        icon: 'uil:facebook',
-        label: 'Facebook',
-        href: 'https://facebook.com/andykumeda'
+      farcaster: {
+        icon: 'bx:bxs-arch',
+        label: 'Farcaster',
+        href: 'https://warpcast.com/andyk'
+      },
+      opensea: {
+        icon: 'simple-icons:opensea',
+        label: 'Opensea',
+        href: 'https://opensea.com/andyk'
+      },
+      telegram: {
+        icon: 'ic:baseline-telegram',
+        label: 'Telegram',
+        href: 'https://t.me/andyk3406'
       }
     },
     form: {
