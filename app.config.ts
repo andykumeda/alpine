@@ -46,6 +46,16 @@ export default defineAppConfig({
         icon: 'ic:baseline-telegram',
         label: 'Telegram',
         href: 'https://t.me/andyk3406'
+      },
+      github: {
+        icon: 'uil:github',
+        label: 'Github',
+        href: 'https://github.com/andykumeda'
+      },
+      gitlab: {
+        icon: 'uil:gitlab',
+        label: 'Gitlab',
+        href: 'https://gitlab.com/andykumeda'
       }
     },
     form: {
