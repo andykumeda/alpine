@@ -15,8 +15,8 @@ stages:
 build:
   stage: build
   script:
-    - npm install
-    - npm run build
+    - pnpm install
+    - pnpm build
 
 deploy:
   stage: deploy
