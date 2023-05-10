@@ -1,18 +1,23 @@
-image: node
+image: node:lts-alpine
+
+variables:
+  PNPM_VERSION: "6.14.2" # Change this to the version of pnpm you want to use
 
 before_script:
-  - npm install
+  - apk add --no-cache git nodejs npm 
+  - npm install -g pnpm
+  - rm -rf ~/.pnpm-store
 
-cache:
-  paths:
-    - node_modules/
-
-pages:
+build:
+  stage: build
   script:
-    - npm run generate
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
+    - pnpm install
+    - pnpm build
+
+deploy:
+  stage: deploy
+  script:
+    - apk add --no-cache git
+    - pnpm install
+    - pnpm build 
 
