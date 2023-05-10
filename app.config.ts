@@ -11,8 +11,8 @@ export default defineAppConfig({
     header: {
       position: 'left', // possible value are : | 'left' | 'center' | 'right'
       logo: {
-        path: '/logo.svg', // path of the logo
-        pathDark: '/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
+        path: '/img/logo.svg', // path of the logo
+        pathDark: '/img/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
         alt: 'alpine' // alt of the logo
       }
     },
@@ -27,16 +27,35 @@ export default defineAppConfig({
     },
     socials: {
       twitter: '0xandyk',
-      instagram: 'andykumeda',
       linkedin: {
         icon: 'uil:linkedin',
         label: 'LinkedIn',
         href: 'https://linkedin.com/in/andykumeda'
       },
-      facebook: {
-        icon: 'uil:facebook',
-        label: 'Facebook',
-        href: 'https://facebook.com/andykumeda'
+      farcaster: {
+        icon: 'bx:bxs-arch',
+        label: 'Farcaster',
+        href: 'https://warpcast.com/andyk'
+      },
+      opensea: {
+        icon: 'simple-icons:opensea',
+        label: 'Opensea',
+        href: 'https://opensea.com/andyk'
+      },
+      telegram: {
+        icon: 'ic:baseline-telegram',
+        label: 'Telegram',
+        href: 'https://t.me/andyk3406'
+      },
+      github: {
+        icon: 'uil:github',
+        label: 'Github',
+        href: 'https://github.com/andykumeda'
+      },
+      gitlab: {
+        icon: 'uil:gitlab',
+        label: 'Gitlab',
+        href: 'https://gitlab.com/andykumeda'
       }
     },
     form: {
@@ -44,3 +63,4 @@ export default defineAppConfig({
     }
   }
 })
+
