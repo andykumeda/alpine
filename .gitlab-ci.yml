@@ -2,6 +2,7 @@ image: node:latest
 
 before_script:
   - npm install
+  - npm install -g pnpm
 
 stages:
   - build
@@ -10,7 +11,7 @@ stages:
 build:
   stage: build
   script:
-    - npm run build
+    - pnpm build
 
 cache:
   key:
@@ -22,10 +23,10 @@ cache:
 pages:
   stage: pages
   script:
-    - npm run generate
+    - pnpm generate
   artifacts:
     paths:
-      - public
+      - .output/public
   only:
     - alpine-new
 
