@@ -16,7 +16,7 @@ deploy:
     - echo 'deploying to pages'
   artifacts:
     paths:
-      - .output/public
+      - /.output/public
   only:
     - alpine-new
 
