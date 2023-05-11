@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         }
     },
 
-  extends: 'themes/alpine-theme',
+  extends: './themes/alpine-theme',
   themes: [
     {
       name: 'alpine-theme', // the name of your theme

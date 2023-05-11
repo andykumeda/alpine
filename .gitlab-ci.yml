@@ -27,9 +27,8 @@ deploy:
 pages:
   stage: pages
   script:
-    - npm config set @gitlab-ci:registry https://gitlab.com/api/v4/packages/npm/
-    - npm install -g gitlab-ci-pages
-    - gitlab-ci-pages -r gitlab.com -t $CI_BUILD_TOKEN -b main -s public -D $CI_PROJECT_NAMESPACE.gitlab.io -B gh-pages
+    - npm install -g gitlab-ci
+    - gitlab-ci -r gitlab.com -t $CI_BUILD_TOKEN -b main -s public -D $CI_PROJECT_NAMESPACE.gitlab.io -B gh-pages
   artifacts:
     paths:
       - public
