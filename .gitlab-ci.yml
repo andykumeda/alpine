@@ -3,6 +3,7 @@ image: node:16
 stages:
   - build
   - deploy
+  - pages
 
 build:
   stage: build
