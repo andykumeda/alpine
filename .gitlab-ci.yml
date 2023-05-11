@@ -19,17 +19,6 @@ cache:
   paths:
       - node_modules/
 
-deploy:
-  stage: deploy
-  when: manual
-  script:
-    - npm run generate
-  artifacts:
-    paths:
-      - public
-  only:
-    - alpine-new
-
 pages:
   stage: pages
   script:
