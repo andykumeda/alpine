@@ -7,12 +7,12 @@ stages:
 build:
   stage: build
   script:
-    - yarn install
-    - yarn build
+    - pnpm install
+    - pnpm build
 
 deploy:
   stage: deploy
   when: manual
   script:
-    - yarn deploy
+    - pnpm generate
 
