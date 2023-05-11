@@ -1,13 +1,13 @@
 # Alpine Starter
 
-Starter template for [Alpine](https://alpine.nuxt.space).
+Modified template for [Alpine](https://alpine.nuxt.space). The customized version can be found under themes.
 
 ## Clone
 
-Clone the repository (using `nuxi`):
+Clone this repository 
 
 ```bash
-npx nuxi init -t themes/alpine
+git clone https://github.com/andykumeda/andykumeda.github.io
 ```
 
 ## Setup
