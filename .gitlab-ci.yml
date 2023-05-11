@@ -24,10 +24,9 @@ pages:
   stage: pages
   script:
     - pnpm generate
-    - cp -r .output/public public
   artifacts:
     paths:
-      - public
+      - .output/public
   only:
     - alpine-new
 
