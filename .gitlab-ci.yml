@@ -24,7 +24,7 @@ pages:
   stage: pages
   script:
     - pnpm generate
-    - mv .output/public public
+    - mv .output/public/* public
   artifacts:
     paths:
       - public
