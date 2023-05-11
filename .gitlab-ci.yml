@@ -1,18 +1,18 @@
-image: node
+image: node:16
 
-before_script:
-  - npm install
+stages:
+  - build
+  - deploy
 
-cache:
-  paths:
-    - node_modules/
-
-pages:
+build:
+  stage: build
   script:
-    - npm run generate
-  artifacts:
-    paths:
-      - public
-  only:
-    - alpine-new
+    - yarn install
+    - yarn build
+
+deploy:
+  stage: deploy
+  when: manual
+  script:
+    - yarn deploy
 
