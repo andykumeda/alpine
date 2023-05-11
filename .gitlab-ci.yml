@@ -25,9 +25,10 @@ deploy:
     - alpine-new
 
 pages:
-  stage: deploy
+  stage: pages
   script:
-    - echo 'Deploying to GitLab Pages...'
+    - npm install -g gitlab-ci-pages
+    - gitlab-ci-pages -r gitlab.com -t $CI_BUILD_TOKEN -b main -s public -D $CI_PROJECT_NAMESPACE.gitlab.io -B gh-pages
   artifacts:
     paths:
       - public
