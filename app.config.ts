@@ -3,8 +3,8 @@ export default defineAppConfig({
     title: 'AndyK',
     description: 'My Web3 Profile',
     image: {
-      src: '/social-card-preview.png',
-      alt: 'An image showcasing my project.',
+      src: '/img/cryptoface.png',
+      alt: 'My Cryptoface',
       width: 400,
       height: 300
     },
@@ -13,7 +13,7 @@ export default defineAppConfig({
       logo: {
         path: '/img/logo.svg', // path of the logo
         pathDark: '/img/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
-        alt: 'alpine' // alt of the logo
+        alt: 'ak' // alt of the logo
       }
     },
     footer: {
