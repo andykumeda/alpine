@@ -14,9 +14,10 @@ deploy:
   stage: deploy
   script:
     - echo 'deploying to pages'
+    - ls $CI_PROJECT_DIR/.output/public
   artifacts:
     paths:
-      - /.output/public
+      - $CI_PROJECT_DIR/.output/public
   only:
     - alpine-new
 
