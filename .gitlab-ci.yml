@@ -1,29 +1,19 @@
-image: node:latest
-
-before_script:
-  - npm install
-  - npm install -g pnpm
+image: node:16
 
 stages:
   - build
-  - pages
+  - deploy
 
 build:
   stage: build
   script:
-    - pnpm build
+    - npm install
+    - npm run generate
 
-cache:
-  key:
-    files: 
-      - pnpm-lock.yaml
-  paths:
-      - node_modules/
-
-pages:
-  stage: pages
+deploy:
+  stage: deploy
   script:
-    - pnpm generate
+    - echo 'deploying to pages'
   artifacts:
     paths:
       - .output/public
