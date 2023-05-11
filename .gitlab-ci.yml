@@ -1,17 +1,23 @@
-image: node:16
-
-stages:
-  - build
-  - deploy
-  - pages
+image: node:latest
 
 before_script:
   - npm install
+
+stages:
+  - build
+  - pages
 
 build:
   stage: build
   script:
     - npm run build
+
+cache:
+  key:
+    files: 
+      - pnpm-lock.yaml
+  paths:
+      - node_modules/
 
 deploy:
   stage: deploy
@@ -27,8 +33,7 @@ deploy:
 pages:
   stage: pages
   script:
-    - npm install -g gitlab-ci
-    - gitlab-ci -r gitlab.com -t $CI_BUILD_TOKEN -b main -s public -D $CI_PROJECT_NAMESPACE.gitlab.io -B gh-pages
+    - npm run generate
   artifacts:
     paths:
       - public
