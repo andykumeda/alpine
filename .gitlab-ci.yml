@@ -7,12 +7,12 @@ stages:
 build:
   stage: build
   script:
-    - pnpm install
-    - pnpm build
+    - npm install
+    - npm run build
 
 deploy:
   stage: deploy
   when: manual
   script:
-    - pnpm generate
+    - npm run generate
 
