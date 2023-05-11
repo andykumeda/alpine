@@ -13,6 +13,7 @@ build:
 deploy:
   stage: deploy
   script:
+    - npm install
     - npm run generate
     - echo 'deploying to pages'
     - ls $CI_PROJECT_DIR/.output/public
