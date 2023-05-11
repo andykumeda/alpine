@@ -24,9 +24,10 @@ pages:
   stage: pages
   script:
     - pnpm generate
+    - mv .output/public public
   artifacts:
     paths:
-      - .output/public
+      - public
   only:
     - alpine-new
 
