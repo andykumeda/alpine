@@ -1,4 +1,4 @@
-# Alpine Starter
+# Personal Website (Modded Alpine Theme)
 
 Modified template for [Alpine](https://alpine.nuxt.space). The customized version can be found under themes.
 
