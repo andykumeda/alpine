@@ -51,11 +51,6 @@ export default defineAppConfig({
         icon: 'uil:github',
         label: 'Github',
         href: 'https://github.com/andykumeda'
-      },
-      gitlab: {
-        icon: 'uil:gitlab',
-        label: 'Gitlab',
-        href: 'https://gitlab.com/andykumeda'
       }
     },
     form: {
