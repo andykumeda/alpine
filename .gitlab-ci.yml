@@ -15,4 +15,19 @@ deploy:
   when: manual
   script:
     - npm run generate
+  artifacts:
+    paths:
+      - public
+  only:
+    - alpine-new
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Deploying to GitLab Pages...'
+  artifacts:
+    paths:
+      - public
+  only:
+    - alpine-new
 
