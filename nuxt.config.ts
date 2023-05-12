@@ -30,6 +30,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/device',
+    '@vueuse/nuxt',
   ]
 
 });

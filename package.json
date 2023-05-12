@@ -11,6 +11,8 @@
   "devDependencies": {
     "@nuxt-themes/alpine": "^1.5.4",
     "@nuxtjs/device": "^3.1.0",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/nuxt": "^10.1.2",
     "nuxt": "3.3.3"
   },
   "dependencies": {
@@ -19,7 +21,6 @@
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
-    "@vueuse/core": "^10.1.2",
     "autoprefixer": "^10.4.14",
     "daisyui": "^2.51.6",
     "ismobilejs": "^1.1.1",

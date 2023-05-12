@@ -1,6 +1,10 @@
+import { useMediaQuery } from '@vueuse/core'
+
 <script lang="ts" setup>
 const alpine = useAppConfig().alpine
-const { isMobile } = useDevice();
+const { isMobile } = useDevice()
+const isLargeScreen = useMediaQuery('(min-width: 640px)')
+
 </script>
 
 <template>
@@ -25,7 +29,7 @@ const { isMobile } = useDevice();
       <div v-if="alpine.socials && Object.entries(alpine.socials)" class="social">
         <SocialIcons :socials="alpine.socials" />
       </div>
-      <div v-if="$device.isMobileOrTablet" class="color-mode-switch">
+      <div v-if="!isLargeScreen" class="color-mode-switch">
         <ColorModeSwitch />
       </div>
     </div>
