@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const alpine = useAppConfig().alpine
+const { isMobile } = useDevice();
 </script>
 
 <template>
@@ -23,6 +24,9 @@ const alpine = useAppConfig().alpine
     <div class="icons">
       <div v-if="alpine.socials && Object.entries(alpine.socials)" class="social">
         <SocialIcons :socials="alpine.socials" />
+      </div>
+      <div v-if="$device.isMobileOrTablet" class="color-mode-switch">
+        <ColorModeSwitch />
       </div>
     </div>
   </footer>
@@ -91,6 +95,16 @@ css({
           gridColumnStart: 5,
         }
       },
+      '.color-mode-switch': {
+        gridColumn: 'span 12 / span 12',
+        display: 'flex',
+        justifyContent: 'center',
+        '@xs': {
+          gridColumn: 'span 2 / span 2',
+          gridColumnStart: 11,
+          justifyContent: 'flex-end',
+        }
+      }
     },
   }
 })

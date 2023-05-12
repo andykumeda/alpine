@@ -150,7 +150,6 @@ css({
       }
     },
       '.color-mode-switch': {
-        display: 'none',
         '@sm': {
           display: 'flex',
           gridColumn: 'span 8 / span 8',
