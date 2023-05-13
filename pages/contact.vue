@@ -22,7 +22,7 @@
 </div>
     <p class="my-4 text=xl font-bold">Send me a message!</p>
 
-    <form class="bg-white outline p-6 rounded-lg shadow-md outline-gray-500" accept-charset="UTF-8" action="https://formspree.io/f/mzbqwbql" method="POST">
+    <form class="bg-gray-200 outline p-6 rounded-lg shadow-md outline-gray-500" accept-charset="UTF-8" action="https://formspree.io/f/mzbqwbql" method="POST">
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
         <input class="input input-bordered input-primary w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="name" name="name" required>
