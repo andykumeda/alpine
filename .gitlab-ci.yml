@@ -15,11 +15,9 @@ deploy:
   script:
     - npm install
     - npm run generate
-    - echo 'deploying to pages'
-    - ls $CI_PROJECT_DIR/.output/public
   artifacts:
     paths:
-      - $CI_PROJECT_DIR/.output/public
+      - .output/public
   only:
     - alpine-new
 
