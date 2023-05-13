@@ -54,8 +54,8 @@ css({
       minHeight: '{space.36}',
     },
     '.credits': {
-      fontSize: '{text.3xl.fontSize}',
-      lineHeight: '{text.3xl.lineHeight}',
+      fontSize: '{text.xl.fontSize}',
+      lineHeight: '{text.xl.lineHeight}',
       fontWeight: '{fontWeight.bold}',
       marginBottom: '{space.4}',
     },
