@@ -1,6 +1,13 @@
 import path from 'path'
+import 'whatwg-fetch'
 
 export default defineNuxtConfig({
+  build: {
+    html: {
+      experimentalPayloadParsing: 'false'
+    }
+  },
+
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }]
@@ -8,14 +15,6 @@ export default defineNuxtConfig({
   },
   
   extends: 'themes/alpine',
-
-  themes: [
-    {
-      name: 'alpine', // the name of your theme
-      src: path.resolve(__dirname, 'themes/alpine'), // the path to your theme directory
-      // any other options you want to pass to the theme module
-    }
-  ],
 
   css: [
     'assets/css/main.css'
