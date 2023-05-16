@@ -18,8 +18,9 @@ export default defineAppConfig({
     },
     footer: {
       credits: {
-        enabled: true, // possible value are : true | false
-        repository: 'https://github.com/andykumeda/alpine' // our github repository
+        enabled: true, // possible value are : true | false,
+        text: '@AndyK',
+        repository: '/' // our github repository
       },
       navigation: false, // possible value are : true | false
       alignment: 'center', // possible value are : 'none' | 'left' | 'center' | 'right'

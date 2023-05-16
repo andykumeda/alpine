@@ -1,5 +1,6 @@
 import path from 'path'
 
+
 export default defineNuxtConfig({
   build: {
     html: {
