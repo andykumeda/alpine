@@ -12,7 +12,7 @@ pages:
     - npm run generate
   artifacts:
     paths:
-      - ./.output/public
+      - /.output/public
   only:
     - alpine-new
 
