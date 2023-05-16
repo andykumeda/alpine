@@ -1,19 +1,14 @@
-image: node:16
+image: node
 
-stages:
-  - build
-  - deploy
+before_script:
+  - npm install
 
-build:
-  stage: build
+cache:
+  paths:
+    - node_modules/
+
+pages:
   script:
-    - npm install
-    - npm run generate
-
-deploy:
-  stage: deploy
-  script:
-    - npm install
     - npm run generate
   artifacts:
     paths:
