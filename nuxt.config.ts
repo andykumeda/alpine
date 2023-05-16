@@ -30,7 +30,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/device',
     '@vueuse/nuxt',
-  ]
+  ],
+
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+  ],
+
 
 });
 
