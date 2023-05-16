@@ -10,9 +10,7 @@ cache:
 pages:
   script:
     - npm run generate
-    - mkdir .public
-    - cp -r * .public
-    - mv .public public
+    - cp -r .output/public/* public
   artifacts:
     paths:
       - public
