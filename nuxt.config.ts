@@ -1,19 +1,19 @@
-import path from 'path'
-
-
 export default defineNuxtConfig({
-  build: {
-    html: {
-      experimentalPayloadParsing: 'false'
-    }
+
+  experimental: {
+    payloadExtraction: 'false'
   },
 
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }]
-    }
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }],
+      htmlAttrs: {
+        lang: 'en',
+      },
+      charset: 'UTF-8',
+    },
   },
-  
+
   extends: 'themes/alpine',
 
   css: [
@@ -30,12 +30,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/device',
     '@vueuse/nuxt',
+    'nuxt-gtag',
   ],
 
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-  ],
-
+  gtag: {
+    id: 'G-SDEPZ5L75B'
+  },
 
 });
 
