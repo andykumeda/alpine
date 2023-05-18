@@ -3,7 +3,7 @@ export default defineAppConfig({
     title: 'AndyK',
     description: 'My Web3 Profile',
     image: {
-      src: '/img/cryptoface.png',
+      src: '/img/cryptoface.webp',
       alt: 'My Cryptoface',
       width: 400,
       height: 300
