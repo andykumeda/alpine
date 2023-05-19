@@ -1,15 +1,15 @@
 export default defineAppConfig({
   alpine: {
-    title: 'AndyK',
-    description: 'My Web3 Profile',
+    title: '@AndyK',
+    description: '@AndyK\'s Personal Website',
     image: {
       src: '/img/cryptoface.webp',
       alt: 'My Cryptoface',
-      width: 400,
-      height: 300
+      width: 150,
+      height: 150
     },
     header: {
-      position: 'left', // possible value are : | 'left' | 'center' | 'right'
+      position: 'right', // possible value are : | 'left' | 'center' | 'right'
       logo: {
         path: '/img/logo.svg', // path of the logo
         pathDark: '/img/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
@@ -23,7 +23,7 @@ export default defineAppConfig({
         repository: '/' // our github repository
       },
       navigation: false, // possible value are : true | false
-      alignment: 'center', // possible value are : 'none' | 'left' | 'center' | 'right'
+      alignment: 'left', // possible value are : 'none' | 'left' | 'center' | 'right'
       message: '' // string that will be displayed in the footer (leave empty or delete to disable)
     },
     socials: {

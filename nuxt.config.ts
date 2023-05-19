@@ -1,5 +1,9 @@
 export default defineNuxtConfig({
 
+  router: {
+    base: '/'
+  },
+
   experimental: {
     payloadExtraction: 'false'
   },
