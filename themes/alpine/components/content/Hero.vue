@@ -32,11 +32,9 @@ defineProps({
       </div>
       <NuxtImg
         v-if="image"
-        :class="imagePosition"
+        :class="[imagePosition, 'custom-image-class']"
         :src="image"
         :alt="imageAlt"
-        :width="4"
-        :height="3"
       />
     </div>
   </section>
@@ -64,13 +62,18 @@ css({
       },
       img: {
         width: '100%',
-        aspectRatio: '4 / 3',
+        aspectRatio: '1 / 1',
         objectFit: 'cover',
         borderRadius: '{radii.md}',
         '&.left': {
           order: -1
         }
       },
+     '.custom-image-class': { 
+      width: '200px', 
+      height: '200px',
+  },
+
     }
   }
 })

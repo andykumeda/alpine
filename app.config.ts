@@ -3,7 +3,7 @@ export default defineAppConfig({
     title: '@AndyK',
     description: '@AndyK\'s Personal Website',
     image: {
-      src: '/img/cryptoface.webp',
+      src: '/img/cryptoface-bw.webp',
       alt: 'My Cryptoface',
       width: 150,
       height: 150
