@@ -10,27 +10,15 @@
   },
   "devDependencies": {
     "@nuxt-themes/alpine": "^1.5.4",
-    "@nuxtjs/device": "^3.1.0",
     "@vueuse/core": "^10.1.2",
     "@vueuse/nuxt": "^10.1.2",
     "nuxt": "3.3.3",
     "nuxt-gtag": "^0.5.7"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.4.3",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
+    "@nuxtjs/device": "^3.1.0",
     "daisyui": "^2.51.6",
-    "ismobilejs": "^1.1.1",
     "nuxt": "3.3.3",
-    "pinceau": "^0.18.9",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2",
-    "tailwindcss-dark-mode": "^1.1.7",
-    "vue-mq": "^1.0.1",
-    "vue-screen": "^1.5.6"
+    "tailwindcss": "^3.3.2"
   }
 }
