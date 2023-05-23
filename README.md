@@ -1,4 +1,4 @@
-# Alpine Starter
+# Alpine Theme (modified by AndyK) 
 
 Starter template for [Alpine](https://alpine.nuxt.space).
 
