@@ -9,11 +9,11 @@ export default defineAppConfig({
       height: 150
     },
     header: {
-      position: 'right', // possible value are : | 'left' | 'center' | 'right'
+      position: 'left', // possible value are : | 'left' | 'center' | 'right'
       logo: {
         path: '/img/logo.svg', // path of the logo
         pathDark: '/img/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
-        alt: 'ak' // alt of the logo
+        alt: 'AK' // alt of the logo
       }
     },
     footer: {
@@ -23,8 +23,8 @@ export default defineAppConfig({
         repository: '/' // our github repository
       },
       navigation: false, // possible value are : true | false
-      alignment: 'left', // possible value are : 'none' | 'left' | 'center' | 'right'
-      message: '' // string that will be displayed in the footer (leave empty or delete to disable)
+      alignment: 'center', // possible value are : 'none' | 'left' | 'center' | 'right'
+      message: 'Follow me on...' // string that will be displayed in the footer (leave empty or delete to disable)
     },
     socials: {
       twitter: '0xandyk',
