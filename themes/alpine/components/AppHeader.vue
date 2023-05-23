@@ -45,7 +45,7 @@ const show = ref(false)
 css({
   header: {
     '--header-padding': '{space.16}',
-    '--logo-height': '{space.8}',
+    '--logo-height': '{space.12}',
     position: 'relative',
     display: 'grid',
     gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
