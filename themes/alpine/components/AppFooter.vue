@@ -74,7 +74,7 @@ css({
     width: '3rem',
     height: '3rem',
     borderRadius: '50%',
-    backgroundColor: 'rgb(255, 82, 82)',
+    backgroundColor: 'rgb(34, 205, 255)',
     color: '#fff',
     border: 'none',
     outline: 'none',
