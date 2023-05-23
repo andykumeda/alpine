@@ -5,6 +5,28 @@ const alpine = useAppConfig().alpine
 const { isMobile } = useDevice()
 const isLargeScreen = useMediaQuery('(min-width: 640px)')
 
+const linesThreshold = 20; // Adjust this value to set the number of lines before the button appears
+const scrollPosition = ref(0);
+
+const goToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+  scrollPosition.value = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+}
+
 </script>
 
 <template>
@@ -33,11 +55,37 @@ const isLargeScreen = useMediaQuery('(min-width: 640px)')
         <ColorModeSwitch />
       </div>
     </div>
+      <button v-if="scrollPosition >= linesThreshold" id="to-top-button" @click="goToTop" class="back-to-top-button" title="Go To Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+        </svg>
+        <span class="sr-only">Go to top</span>
+      </button>
+
   </footer>
 </template>
 
 <style scoped lang="ts">
 css({
+  '.back-to-top-button': {
+    position: 'fixed',
+    bottom: '2rem',
+    right: '2rem',
+    width: '3rem',
+    height: '3rem',
+    borderRadius: '50%',
+    backgroundColor: 'rgb(255, 82, 82)',
+    color: '#fff',
+    border: 'none',
+    outline: 'none',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+    transition: 'background-color 0.3s ease-in-out',
+  },
+
   footer: {
     display: 'flex',
     flexDirection: 'column',
@@ -108,8 +156,9 @@ css({
           gridColumnStart: 11,
           justifyContent: 'flex-end',
         }
-      }
-    },
+      },
   }
+},
+
 })
 </style>
