@@ -11,6 +11,7 @@ before_script:
 build:
   stage: build
   script:
+<<<<<<< HEAD
     - pnpm install
     - pnpm build
 
@@ -20,4 +21,13 @@ deploy:
     - apk add --no-cache git
     - pnpm install
     - pnpm build 
+=======
+    - npm run generate
+    - cp -r .output/public/* public
+  artifacts:
+    paths:
+      - public
+  only:
+    - alpine-new
+>>>>>>> alpine-new
 

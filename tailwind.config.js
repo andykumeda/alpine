@@ -7,6 +7,7 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
+    "./content/**/*.md"
   ],
   theme: {
     extend: {
@@ -15,5 +16,7 @@ module.exports = {
       },
     }
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
