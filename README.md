@@ -7,7 +7,7 @@ Modified template for [Alpine](https://alpine.nuxt.space). The customized versio
 Clone this repository 
 
 ```bash
-git clone https://github.com/andykumeda/andykumeda.github.io
+git clone  https://github.com/andykumeda/alpine.git
 ```
 
 ## Setup
