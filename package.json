@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@nuxtjs/device": "^3.1.0",
-    "daisyui": "^2.51.6",
     "nuxt": "3.3.3",
     "tailwindcss": "^3.3.2"
   }
