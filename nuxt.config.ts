@@ -41,5 +41,9 @@ export default defineNuxtConfig({
     id: 'G-SDEPZ5L75B'
   },
 
+  server: {
+    host: '0.0.0.0'
+  }
+
 });
 
