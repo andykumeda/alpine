@@ -14,12 +14,12 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/plausible": "^0.2.4",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.11",
     "eslint": "^8.57.0",
     "release-it": "^16.3.0",
     "typescript": "^5.4.5",
     "vite-plugin-inspect": "^0.7.42",
-    "vue": "^3.4.23"
+    "vue": "^3.4.27"
   },
   "dependencies": {
     "@nuxt-themes/elements": "^0.9.5",
